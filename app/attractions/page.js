@@ -1,5 +1,7 @@
 import React from 'react'
-import {Card, CardActions, CardContent, CardMedia, Button, Typography, Grid} from '@mui/material'
+import {
+    Card, CardActions, CardContent, CardMedia, Button, Typography, Grid
+} from '@mui/material'
 
 export async function getData() {
     const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/attractions`)
@@ -27,7 +29,8 @@ export default async function page() {
                                 title={attraction.name}
                             />
                             <CardContent>
-                                <Typography gutterBottom variant="h6" component="div">
+                                <Typography gutterBottom variant="h6"
+                                    component="div">
                                     {attraction.name}
                                 </Typography>
                                 <Typography variant="body2" color="text.secondary" noWrap>
